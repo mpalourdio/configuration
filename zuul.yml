@@ -21,4 +21,4 @@ spring:
         - id: sbt
           uri: http://localhost:8080
           predicates:
-            - Path=/sbt
+            - Path=/sbt/**
