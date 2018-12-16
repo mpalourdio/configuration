@@ -7,10 +7,16 @@
 ## CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ##
 
-server.port=8083
-eureka.instance.instance-id=${spring.application.name}:${server.port}
+server:
+  port: 8083
 
-zuul.ignore-security-headers=false
-zuul.routes.sbt.path=/sbt/**
-zuul.routes.sbt.service-id=springboottemplate
+eureka:
+  instance:
+    instanceId: ${spring.application.name}:${server.port}
 
+zuul:
+  ignore-security-headers: false
+  routes:
+    sbt:
+      path: /sbt/**
+      serviceId: springboottemplate
