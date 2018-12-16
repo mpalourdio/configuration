@@ -25,5 +25,6 @@ spring:
           uri: lb://springboottemplate
           filters:
             - StripPrefix=1
+            - RemoveRequestHeader=ignore-me
           predicates:
             - Path=/sbt/**
