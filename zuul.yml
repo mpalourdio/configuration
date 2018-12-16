@@ -19,6 +19,6 @@ spring:
     gateway:
       routes:
         - id: sbt
-          uri: lb://springboottemplate
+          uri: http://localhost:8080
           predicates:
             - Path=/sbt
