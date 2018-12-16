@@ -20,5 +20,3 @@ spring:
       routes:
         - id: sbt
           uri: http://localhost:8080
-          predicates:
-            - Path=/sbt
