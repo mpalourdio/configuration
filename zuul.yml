@@ -22,7 +22,9 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
-      - id: sbt
-        uri: http://localhost:8080
-        predicates:
-        - Path=/sbt/**
+        - id: sbt
+          uri: lb://springboottemplate
+          filters:
+            - StripPrefix=1
+          predicates:
+            - Path=/sbt/**
