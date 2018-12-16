@@ -17,8 +17,11 @@ eureka:
 spring:
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
       routes:
         - id: sbt
-          uri: http://localhost:8080
+          uri: lb://springboottemplate
           predicates:
-            - Path=/sbt/**
+          - Path=/sbt/**
