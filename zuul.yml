@@ -14,9 +14,11 @@ eureka:
   instance:
     instanceId: ${spring.application.name}:${server.port}
 
-zuul:
-  ignore-security-headers: false
-  routes:
-    sbt:
-      path: /sbt/**
-      serviceId: springboottemplate
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: sbt
+          uri: lb://springboottemplate
+          predicates:
+            - Path=/sbt
