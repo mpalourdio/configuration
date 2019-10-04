@@ -6,6 +6,10 @@
     <property name="charset" value="UTF-8"/>
     <property name="fileExtensions" value="java, properties, xml"/>
 
+    <module name="LineLength">
+        <property name="max" value="140"/>
+    </module>
+
     <module name="TreeWalker">
         <module name="AbbreviationAsWordInName"/>
         <module name="AbstractClassName"/>
@@ -23,9 +27,6 @@
         <module name="InnerAssignment"/>
         <module name="InterfaceIsType"/>
         <module name="LeftCurly"/>
-        <module name="LineLength">
-            <property name="max" value="140"/>
-        </module>
         <module name="MemberName"/>
         <module name="MethodName"/>
         <module name="MethodParamPad"/>
