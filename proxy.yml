@@ -17,14 +17,16 @@ eureka:
 spring:
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
-      routes:
-        - id: sbt
-          uri: lb://springboottemplate
-          filters:
-            - StripPrefix=1
-            - RemoveRequestHeader=ignore-me
-          predicates:
-            - Path=/sbt/**
+      server:
+        webflux:
+          discovery:
+            locator:
+              enabled: true
+          routes:
+          - id: sbt
+            uri: lb://springboottemplate
+            filters:
+              - StripPrefix=1
+              - RemoveRequestHeader=ignore-me
+            predicates:
+              - Path=/sbt/**
